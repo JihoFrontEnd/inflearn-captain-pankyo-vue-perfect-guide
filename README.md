@@ -13,3 +13,10 @@
 4.  **Mixins**와 **HOC**를 이용한 컴포넌트 재활용 방법
 5.  **외부 라이브러리 모듈화** 및 **실무 프로젝트 구성** 방법
 6.  사용자 경험을 높이는 라우터 설계 방법과 **고급 라우터 패턴**
+
+### 개발 환경
+
+-   Node.js 10.x
+-   VSCODE
+-   [GitHub](https://github.com/joshua1988/vue-advanced)
+    ([gist에 요청](https://gist.github.com/joshua1988/da1b9ab5703480f71cef88b2f8cb6ede))
