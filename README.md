@@ -20,3 +20,12 @@
 -   VSCODE
 -   [GitHub](https://github.com/joshua1988/vue-advanced)
     ([gist에 요청](https://gist.github.com/joshua1988/da1b9ab5703480f71cef88b2f8cb6ede))
+
+### VSCODE 플러그인 목록
+
+-   Vetur
+-   TSLint
+-   ESLint
+-   Auto Close Tag
+-   Material Icon
+-   Night Owl
