@@ -23,19 +23,19 @@ export const store = new Vuex.Store({
     },
   },
   actions: {
-    FETCH_NEWS_LIST(context) {
+    FETCH_NEWS_LIST({ commit }) {
       fetchNewsList()
-        .then(response => context.commit('SET_NEWS_LIST', response.data))
+        .then(({ data }) => commit('SET_NEWS_LIST', data))
         .catch(e => console.error(e));
     },
-    FETCH_JOBS_LIST(context) {
+    FETCH_JOBS_LIST({ commit }) {
       fetchJobsList()
-        .then(response => context.commit('SET_JOBS_LIST', response.data))
+        .then(({ data }) => commit('SET_JOBS_LIST', data))
         .catch(e => console.error(e));
     },
-    FETCH_ASK_LIST(context) {
+    FETCH_ASK_LIST({ commit }) {
       fetchAskList()
-        .then(response => context.commit('SET_ASK_LIST', response.data))
+        .then(({ data }) => commit('SET_ASK_LIST', data))
         .catch(e => console.error(e));
     },
   },
