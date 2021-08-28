@@ -39,4 +39,7 @@ export const store = new Vuex.Store({
         .catch(e => console.error(e));
     },
   },
+  getters: {
+    getAskList: (state) => state.askList,
+  },
 });
