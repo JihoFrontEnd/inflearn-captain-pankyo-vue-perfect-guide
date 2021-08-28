@@ -13,3 +13,31 @@
     -   Vue Component의 `this`는 해당 Vue Component를 가리킨다.
 3.  Promise 객체로 인한 즉, callback 함수의 `this`는 `undifined`이다.
 4.  그러나 화살표 함수를 사용할 경우, 상위(component) 객체를 카리킨다.
+
+## callback
+
+>   callback 지옥
+
+```js
+<script src="https://code.jquery.com/jquery-3.3.1.js" "..."></script>
+<script>
+  function a() {
+    // 1
+    var result = [];
+    // 2
+    $.ajax({
+      url: "http...",
+      success: function(data) {
+        result = data;
+        function b(result) {
+          var newResult = parse(result);
+          function c(newResult) {
+            // ...
+          }
+        }
+      }
+    });
+  }
+```
+
+>   `Promise` 객체가 대두한 이유
