@@ -1,17 +1,12 @@
 <template>
   <div id="app">
-    Hello
+    <router-view />
   </div>
 </template>
 
 <script>
 export default {
-  methods: {
-    fetchData() {
-      console.log('Hello');
-    }
-  },
-}
+};
 </script>
 
 <style>
