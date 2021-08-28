@@ -41,4 +41,4 @@ vue create <project name>
 | 명령어         | `vue init`             | `vue create`                |
 | 웹팩 설정 파일 | 노출 O                 | 노출 X                      |
 | 프로젝트 구성  | 깃헙의 템플릿 다운로드 | 플러그인 기반으로 기능 추가 |
-| ES6 이해도     | 필요 X                 | 필요 O                      |
+| ES6 이해도     | 필요 X                 | 필요 O                      |=
