@@ -55,7 +55,8 @@ function callAjax() {
       url: '',
       success: function(data) {
         resolve(data);
-      }
+      },
+      //...
     });
   });
 }
