@@ -2,8 +2,8 @@
 
 ## 제작할 사이트 및 API 소개
 
--   Hacker News[😎](https://news.ycombinator.com/)
--   Hacker News API[🤘](https://news.ycombinator.com/)
+-   Hacker News[😎](https://news.ycombinator.com)
+-   Hacker News API[🤘](https://github.com/tastejs/hacker-news-pwas/blob/master/docs/api.md)
 
 ## 애플리케이션 라우터 설계
 
