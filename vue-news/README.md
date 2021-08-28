@@ -38,6 +38,32 @@
       }
     });
   }
+  a();
+</script>
 ```
 
 >   `Promise` 객체가 대두한 이유
+
+## `Promise`
+
+>   비동기 처리에서 callback hell을 방지한다.
+
+```js
+function callAjax() {
+  return new Promise(function(resolve, reject) {
+    $.ajax({
+      url: '',
+      success: function(data) {
+        resolve(data);
+      }
+    });
+  });
+}
+
+callAjax()
+  .then(function(data) {
+    //...
+  });
+```
+
+[reference](https://joshua1988.github.io/web-development/javascript/promise-for-beginners)
