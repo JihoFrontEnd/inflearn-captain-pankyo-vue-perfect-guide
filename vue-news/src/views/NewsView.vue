@@ -1,8 +1,12 @@
 <template>
   <div>
-    <div v-for="news in this.$store.state.newsList" :key="news.id">
-      {{ news.title }}
-    </div>
+    <p v-for="news in this.$store.state.newsList" :key="news.id">
+      <a v-bind:href="news.url">
+        {{ news.title }}
+      </a>
+      <small>{{ news.time_ago }} by {{ news.user }}</small>
+    </p>
+    
   </div>
 </template>
 
