@@ -68,3 +68,5 @@ callAjax()
 ```
 
 [reference](https://joshua1988.github.io/web-development/javascript/promise-for-beginners)
+
+## Refactoring Components Design
