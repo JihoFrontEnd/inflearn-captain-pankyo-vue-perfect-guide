@@ -19,7 +19,6 @@ export default {
     },
   },
   created() {
-    // const itemid = this.$route.query.id;
     const itemid = this.$route.params.id;
     this.$store.dispatch('FETCH_ITEM_INFO', itemid);
     console.log(this.itemInfo);
