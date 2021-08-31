@@ -1,8 +1,7 @@
 <template>
   <div>
-    <p>id: {{ itemInfo.id }}</p>
+    <h3>{{ itemInfo.title }}</h3>
     <div>
-      content
       <p v-html="itemInfo.content"></p>
     </div>
     <p v-for="comment in itemInfo.comments" :key="comment.id">
@@ -20,7 +19,8 @@ export default {
     },
   },
   created() {
-    const itemid = this.$route.query.id;
+    // const itemid = this.$route.query.id;
+    const itemid = this.$route.params.id;
     this.$store.dispatch('FETCH_ITEM_INFO', itemid);
     console.log(this.itemInfo);
   },
