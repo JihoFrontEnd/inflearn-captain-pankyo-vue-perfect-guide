@@ -1,17 +1,17 @@
 <template>
   <div>
-    <ul class="news-list">
+    <ul class="item-list">
       <li v-for='ask in getAskList' :key='ask.id' class="post">
         <div class="points">
           {{ ask.points }}
         </div>
         <div>
-          <p class="news-title">
+          <p class="item-title">
             <router-link v-bind:to="`item/${ask.id}`">
               {{ ask.title }}
             </router-link>
           </p>
-          <small class="link-text">
+          <small class="item-text">
             {{ ask.time_ago }} by
             <router-link :to='`/user/${ask.user}`' class="link-text">
               {{ ask.user }}
@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style scoped>
-.news-list {
+.item-list {
   margin: 0;
   padding: 0;
 }
@@ -55,10 +55,10 @@ export default {
   justify-content: center;
   color: #42b883;
 }
-.news-title {
+.item-title {
   margin: 0;
 }
-.link-text {
+.item-text {
   color: #828282;
 }
 </style>
