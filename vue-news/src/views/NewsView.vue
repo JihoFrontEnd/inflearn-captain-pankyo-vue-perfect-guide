@@ -18,15 +18,6 @@
             </router-link>
           </small>
         </div>
-        <!-- <a v-bind:href='news.url'>
-          {{ news.title }}
-        </a>
-        <small>
-          {{ news.time_ago }} by
-          <router-link :to='`/user/${news.user}`'>
-            {{ news.user }}
-          </router-link>
-        </small> -->
       </li>
     </ul>
   </div>
