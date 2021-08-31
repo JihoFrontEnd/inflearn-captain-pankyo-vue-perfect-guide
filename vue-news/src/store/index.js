@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue from 'vue';
 import Vuex from 'vuex';
 
 import mutations from './mutations';
@@ -16,6 +16,7 @@ export const store = new Vuex.Store({
   },
   getters: {
     getAskList: (state) => state.askList,
+    getItemInfo: (state) => state.itemInfo,
   },
   mutations,
   actions,

@@ -18,7 +18,7 @@
 <script>
 export default {
   created() {
-    this.$store.dispatch('FETCH_NEWS_LIST');
+    this.$store.dispatch("FETCH_NEWS_LIST");
   },
 }
 </script>
