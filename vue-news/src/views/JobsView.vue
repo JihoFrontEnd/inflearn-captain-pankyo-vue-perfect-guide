@@ -12,10 +12,7 @@
             </a>
           </p>
           <small class="link-text">
-            {{ job.time_ago }} by
-            <a :href='`${job.url}`' class="link-text">
-              {{ job.domain }}
-            </a>
+            {{ job.time_ago }} by {{ job.domain }}
           </small>
         </div>
       </li>
