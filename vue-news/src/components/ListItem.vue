@@ -1,20 +1,20 @@
 <template>
   <div>
     <ul class="item-list">
-      <li v-for='news in this.$store.state.newsList' :key='news.id' class="post">
+      <li v-for='item in itemList' :key='item.id' class="post">
         <div class="points">
-          {{ news.points }}
+          {{ item.points || 0 }}
         </div>
         <div>
           <p class="item-title">
-            <a v-bind:href='news.url' target="_blank">
-              {{ news.title }}
+            <a v-bind:href='item.url' target="_blank">
+              {{ item.title }}
             </a>
           </p>
           <small class="item-text">
-            {{ news.time_ago }} by
-            <router-link :to='`/user/${news.user}`' class="link-text">
-              {{ news.user }}
+            {{ item.time_ago }} by
+            <router-link :to='`/user/${item.user}`' class="link-text">
+              {{ item.user }}
             </router-link>
           </small>
         </div>
@@ -24,19 +24,39 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
+  data() {
+    return {
+      name: '',
+    };
+  },
+  computed: {
+    ...mapGetters(['NEWS_LIST', 'ASK_LIST', 'JOBS_LIST']),
+    itemList() {
+      switch (this.name) {
+        case 'news':
+          return this.NEWS_LIST;
+        case 'ask':
+          return this.ASK_LIST;
+        case 'jobs':
+          return this.JOBS_LIST;
+      }
+      return null;
+    },
+  },
   created() {
-    const name = this.$route.name;
-    const dispatch = this.$store.dispatch
-    switch (name) {
+    this.name = this.$route.name;
+    switch (this.name) {
       case 'news':
-        dispatch('FETCH_NEWS_LIST');
+        this.$store.dispatch('FETCH_NEWS_LIST');
         break;
       case 'ask':
-        dispatch('FETCH_ASK_LIST');
+        this.$store.dispatch('FETCH_ASK_LIST');
         break;
       case 'jobs':
-        dispatch('FETCH_JOBS_LIST');
+        this.$store.dispatch('FETCH_JOBS_LIST');
         break;
     }
   },
