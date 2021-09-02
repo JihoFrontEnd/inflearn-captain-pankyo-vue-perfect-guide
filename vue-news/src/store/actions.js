@@ -22,13 +22,13 @@ export default {
       .then(({ data }) => commit('SET_ASK_LIST', data))
       .catch(e => console.error(e));
     },
-  FETCH_USER_INFO({ commit }, username) {
-    fetchUserInfo(username)
+  FETCH_USER_INFO({ commit }, userName) {
+    fetchUserInfo(userName)
       .then(({ data }) => commit('SET_USER_INFO', data))
       .catch(e => console.error(e));
   },
-  FETCH_ITEM_INFO({ commit }, itemid) {
-    fetchItemInfo(itemid)
+  FETCH_ITEM_INFO({ commit }, itemId) {
+    fetchItemInfo(itemId)
       .then(({ data }) => commit('SET_ITEM_INFO', data))
       .catch(e => console.error(e));
   },

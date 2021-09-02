@@ -15,8 +15,8 @@ export default {
     },
   },
   created() {
-    const username = this.$route.params.id;
-    this.$store.dispatch('FETCH_USER_INFO', username);
+    const userName = this.$route.params.id;
+    this.$store.dispatch('FETCH_USER_INFO', userName);
   },
 };
 </script>
