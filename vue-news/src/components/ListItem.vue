@@ -61,17 +61,6 @@ export default {
   },
   created() {
     this.name = this.$route.name;
-    switch (this.name) {
-      case 'news':
-        this.$store.dispatch('FETCH_NEWS_LIST');
-        break;
-      case 'ask':
-        this.$store.dispatch('FETCH_ASK_LIST');
-        break;
-      case 'jobs':
-        this.$store.dispatch('FETCH_JOBS_LIST');
-        break;
-    }
   },
 };
 </script>
