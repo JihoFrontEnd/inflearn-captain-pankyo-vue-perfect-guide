@@ -4,19 +4,24 @@
       <i class="fas fa-user"></i>
     </div>
     <div class="user-description">
-      <!-- <router-link :to="`/user/${getItemInfo.user}`">
-        {{ getItemInfo.user }}
-      </router-link>
+      {{ userInfo.id }}
       <div class="time">
-        {{ getItemInfo.time_ago }}
-      </div> -->
+        {{ userInfo.created_time }}
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
+import { mapGetters } from 'vuex';
 
+export default {
+  computed: {
+    ...mapGetters(['getItemInfo']),
+    userInfo() {
+      return this.$store.state.userInfo;
+    },
+  },
 };
 </script>
 
