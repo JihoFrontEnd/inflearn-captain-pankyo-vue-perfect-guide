@@ -1,7 +1,16 @@
 <template>
   <div>
     <section>
-      <UserProfile /> 
+      <UserProfile :info="getItemInfo">
+        <div slot="username">
+          {{ getItemInfo.user }}
+        </div>
+        <template slot="time">
+          {{ getItemInfo.time_ago }}
+        </template>
+      </UserProfile>
+    </section>
+    <section>
       <h2>{{ getItemInfo.title }}</h2>
     </section>
     <section>
