@@ -26,7 +26,19 @@
 <script>
 export default {
   created() {
-    this.$store.dispatch('FETCH_NEWS_LIST');
+    const name = this.$route.name;
+    const dispatch = this.$store.dispatch
+    switch (name) {
+      case 'news':
+        dispatch('FETCH_NEWS_LIST');
+        break;
+      case 'ask':
+        dispatch('FETCH_ASK_LIST');
+        break;
+      case 'jobs':
+        dispatch('FETCH_JOBS_LIST');
+        break;
+    }
   },
 };
 </script>

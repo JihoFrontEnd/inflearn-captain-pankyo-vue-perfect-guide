@@ -1,5 +1,6 @@
 <template>
   <div>
+    <ListItem />
     <ul class="item-list">
       <li v-for='ask in getAskList' :key='ask.id' class="post">
         <div class="points">
@@ -24,14 +25,9 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import ListItem from '../components/ListItem.vue';
 
 export default {
-  created() {
-    this.$store.dispatch('FETCH_ASK_LIST');
-  },
-  computed: {
-    ...mapGetters(['getAskList']),
-  }
+  components: { ListItem },
 };
 </script>
