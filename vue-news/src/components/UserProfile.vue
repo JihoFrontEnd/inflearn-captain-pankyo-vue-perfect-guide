@@ -4,23 +4,18 @@
       <i class="fas fa-user"></i>
     </div>
     <div class="user-description">
-      {{ userInfo.id }}
+      {{ info.id }}
       <div class="time">
-        {{ userInfo.created_time }}
+        {{ info.created }}
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-
 export default {
-  computed: {
-    ...mapGetters(['getItemInfo']),
-    userInfo() {
-      return this.$store.state.userInfo;
-    },
+  props: {
+    info: Object,
   },
 };
 </script>
