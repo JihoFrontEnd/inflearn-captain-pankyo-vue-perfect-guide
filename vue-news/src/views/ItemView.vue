@@ -2,11 +2,11 @@
   <div>
     <section>
       <UserProfile :info="getItemInfo">
-        <div slot="username">
+        <router-link slot="username" :to="`/user/${getItemInfo.user}`">
           {{ getItemInfo.user }}
-        </div>
+        </router-link>
         <template slot="time">
-          {{ getItemInfo.time_ago }}
+          Posted {{ getItemInfo.time_ago }}
         </template>
       </UserProfile>
     </section>
