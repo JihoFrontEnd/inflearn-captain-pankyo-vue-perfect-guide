@@ -41,7 +41,6 @@ import { mapGetters } from 'vuex';
 
 export default {
   computed: {
-    // ...mapGetters(['NEWS_LIST', 'ASK_LIST', 'JOBS_LIST']),
     ...mapGetters(['ITEM_LIST']),
     itemList() { return this.ITEM_LIST; },
   },

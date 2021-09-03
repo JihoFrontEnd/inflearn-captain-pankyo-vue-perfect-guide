@@ -1,7 +1,3 @@
-// import NewsView from '../views/NewsView.vue';
-// import AskView from '../views/AskView.vue';
-// import JobsView from '../views/JobsView.vue';
-
 import ListView from './ListView.vue';
 import bus from '../utils/bus';
 
