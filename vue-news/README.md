@@ -74,3 +74,7 @@ callAjax()
 ## HOC vs Mixin
 
 -   HOC는 Components Depth가 늘어남에 따라 통신의 관리가 힘들어질 수 있다.
+-   Mixin은 Components Depth가 플랫해지지만, 관리해야 하는 Components가 늘어난다.
+-   상황에 따라 유연하게 적용하면 좋다.
+-   사용하는 방법은 Mixin이 더 직관적일 수 있다.
+-   각각 문법의 차이가 있고, 정답은 없다.
