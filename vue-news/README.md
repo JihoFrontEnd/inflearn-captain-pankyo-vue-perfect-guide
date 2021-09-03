@@ -70,3 +70,7 @@ callAjax()
 [reference](https://joshua1988.github.io/web-development/javascript/promise-for-beginners)
 
 ## Refactoring Components Design
+
+## HOC vs Mixin
+
+-   HOC는 Components Depth가 늘어남에 따라 통신의 관리가 힘들어질 수 있다.
