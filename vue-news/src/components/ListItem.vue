@@ -40,27 +40,10 @@
 import { mapGetters } from 'vuex';
 
 export default {
-  data() {
-    return {
-      name: '',
-    };
-  },
   computed: {
-    ...mapGetters(['NEWS_LIST', 'ASK_LIST', 'JOBS_LIST']),
-    itemList() {
-      switch (this.name) {
-        case 'news':
-          return this.NEWS_LIST;
-        case 'ask':
-          return this.ASK_LIST;
-        case 'jobs':
-          return this.JOBS_LIST;
-      }
-      return null;
-    },
-  },
-  created() {
-    this.name = this.$route.name;
+    // ...mapGetters(['NEWS_LIST', 'ASK_LIST', 'JOBS_LIST']),
+    ...mapGetters(['ITEM_LIST']),
+    itemList() { return this.ITEM_LIST; },
   },
 };
 </script>

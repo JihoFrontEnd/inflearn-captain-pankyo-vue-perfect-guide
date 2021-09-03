@@ -8,16 +8,18 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
   state: {
-    newsList: [],
-    askList: [],
-    jobsList: [],
+    itemList: [],
+    // newsList: [],
+    // askList: [],
+    // jobsList: [],
     userInfo: {},
     itemInfo: {},
   },
   getters: {
-    NEWS_LIST: (state) => state.newsList,
-    ASK_LIST: (state) => state.askList,
-    JOBS_LIST: (state) => state.jobsList,
+    ITEM_LIST: (state) => state.itemList,
+    // NEWS_LIST: (state) => state.newsList,
+    // ASK_LIST: (state) => state.askList,
+    // JOBS_LIST: (state) => state.jobsList,
     getAskList: (state) => state.askList,
     getItemInfo: (state) => state.itemInfo,
   },
