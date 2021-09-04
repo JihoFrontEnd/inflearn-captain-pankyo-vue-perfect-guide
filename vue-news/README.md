@@ -119,3 +119,17 @@ fetchData();
 ```
 
 >   Google Console에서 동작하면 쉽게 확인할 수 있다.
+
+```js
+loginUser() {
+  axios.get('https://jsonplaceholder.typicode.com/users/1')
+    .then(response => {
+      if (response.data.id === 1) {
+        axios.get('https://jsonplaceholder.typicode.com/todos')
+          .then()
+          .catch();
+      }
+    })
+    .catch();
+}
+```
