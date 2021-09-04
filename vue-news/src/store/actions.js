@@ -5,10 +5,10 @@ import {
 } from '../api';
 
 export default {
-  FETCH_ITEM_LIST({ commit }, pageName) {
-    return fetchItemList(pageName)
-      .then(({ data }) => commit('SET_ITEM_LIST', data))
-      .catch(e => console.error(e));
+  async FETCH_ITEM_LIST({ commit }, pageName) {
+    const response = await fetchItemList(pageName);
+    commit('SET_ITEM_LIST', response.data);
+    return response;
   },
   FETCH_USER_INFO({ commit }, userName) {
     return fetchUserInfo(userName)
