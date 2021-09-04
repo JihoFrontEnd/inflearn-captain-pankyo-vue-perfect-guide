@@ -85,3 +85,5 @@ callAjax()
     -   `beforeEnter`: 특정 URL로 접근하기 전의 동작을 정의
 2.  Component Life Cycle Hooks
     -   `created`: Component가 생성되자마자 호출되는 로직
+
+>   프로젝트에서 세운 규칙에 따라 UX를 고려한 UI 설계를 하자.
