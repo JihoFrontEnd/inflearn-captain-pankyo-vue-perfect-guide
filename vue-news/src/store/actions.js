@@ -10,17 +10,14 @@ export default {
     commit('SET_ITEM_LIST', response.data);
     return response;
   },
-  FETCH_USER_INFO({ commit }, userName) {
-    return fetchUserInfo(userName)
-      .then(({ data }) => commit('SET_USER_INFO', data))
-      .catch(e => console.error(e));
+  async FETCH_USER_INFO({ commit }, userName) {
+    const response = await fetchUserInfo(userName);
+    commit('SET_USER_INFO', response.data);
+    return response;
   },
-  FETCH_ITEM_INFO({ commit }, itemId) {
-    return fetchItemInfo(itemId)
-      .then((response) => {
-        commit('SET_ITEM_INFO', response);
-        return response;
-      })
-      .catch(e => console.error(e));
-  },
+  async FETCH_ITEM_INFO({ commit }, itemId) {
+    const response = await fetchItemInfo(itemId);
+    commit('SET_ITEM_INFO', response.data);
+    return response;
+  }
 };
