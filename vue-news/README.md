@@ -99,3 +99,23 @@ console.log(products);
 
 위 처럼 코드를 직관적으로 사용하기 위해 `async/await`에 대해 학습한다.
 >   실제 위 코드는 제대로 동작하지 않는다.
+
+### example
+
+```js
+async function fetchData() {
+    var list = await getUserList();
+    console.log(list);
+}
+
+function getUserList() {
+    return new Promise(function(resolve, reject) {
+        var userList = ['user1', 'user2', 'user3'];
+        resolve(userList);
+    });
+}
+
+fetchData();
+```
+
+>   Google Console에서 동작하면 쉽게 확인할 수 있다.
