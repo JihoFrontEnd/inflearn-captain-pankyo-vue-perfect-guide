@@ -25,21 +25,19 @@ export default {
   },
   methods: {
     startSpinner() {
-      console.log('start!');
       this.loadingStatus = true;
     },
     endSpinner() {
-      console.log('end.');
       this.loadingStatus = false;
     },
   },
   created() {
-    bus.$on('start:spinner', () => this.startSpinner);
-    bus.$on('end:spinner', () => this.endSpinner);
+    bus.$on('start:spinner', this.startSpinner);
+    bus.$on('end:spinner', this.endSpinner);
   },
   beforeDestroy() {
-    bus.$off('start:spinner', () => this.startSpinner);
-    bus.$off('end:spinner', () => this.endSpinner);
+    bus.$off('start:spinner', this.startSpinner);
+    bus.$off('end:spinner', this.endSpinner);
   },
 };
 </script>
