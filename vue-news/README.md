@@ -142,3 +142,22 @@ async loginUser() {
   }
 }
 ```
+```js
+import { handlerException } from './handler';
+
+async loginUser() {
+  try {
+    var response = await axios.get('https://...1');
+    if (response.data.id === 1) {
+      var list = await axios.get('https://...2')
+      this.items = list;
+    }
+  } catch (error) {
+    handlerException(error.status);
+    console.error(error);
+  }
+}
+
+// hander.js
+export function handlerException(status) {...}
+```
