@@ -133,3 +133,12 @@ loginUser() {
     .catch();
 }
 ```
+```js
+async loginUser() {
+  var response = await axios.get('https://...1');
+  if (response.data.id === 1) {
+    var list = await axios.get('https://...2')
+    this.items = list;
+  }
+}
+```
