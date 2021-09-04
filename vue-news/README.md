@@ -161,3 +161,15 @@ async loginUser() {
 // hander.js
 export function handlerException(status) {...}
 ```
+
+## Chart.js [〽](https://www.chartjs.org)
+
+> [State of JS](https://2020.stateofjs.com/en-US/technologies/front-end-frameworks)
+
+1.  외부 라이브러리 모듈화
+    -   Vue.js 관련 라이브러리가 없을 때 일반 라이브러리를 결합할 수 있어야 한다.
+2.  종류
+    -   차트
+    -   데이트 피커
+    -   테이블
+    -   스피너
