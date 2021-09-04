@@ -78,3 +78,10 @@ callAjax()
 -   상황에 따라 유연하게 적용하면 좋다.
 -   사용하는 방법은 Mixin이 더 직관적일 수 있다.
 -   각각 문법의 차이가 있고, 정답은 없다.
+
+## 데이터 호출 시점
+
+1.  Router Navigation Guard
+    -   `beforeEnter`: 특정 URL로 접근하기 전의 동작을 정의
+2.  Component Life Cycle Hooks
+    -   `created`: Component가 생성되자마자 호출되는 로직
