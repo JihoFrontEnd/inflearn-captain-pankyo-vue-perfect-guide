@@ -87,3 +87,15 @@ callAjax()
     -   `created`: Component가 생성되자마자 호출되는 로직
 
 >   프로젝트에서 세운 규칙에 따라 UX를 고려한 UI 설계를 하자.
+
+## JS async process
+
+```js
+var id = $.get('example.com/id');
+if (id === 'jiho')
+    var products = $.get('example.com/id/products');
+console.log(products);
+```
+
+위 처럼 코드를 직관적으로 사용하기 위해 `async/await`에 대해 학습한다.
+>   실제 위 코드는 제대로 동작하지 않는다.
