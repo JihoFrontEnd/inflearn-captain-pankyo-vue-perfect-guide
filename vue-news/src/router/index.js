@@ -29,10 +29,7 @@ export const router = new VueRouter({
       beforeEnter: (to, from, next) => {
         bus.$emit('start:spinner');
         store.dispatch('FETCH_ITEM_LIST', to.name)
-          .then(() => {
-            bus.$emit('end:spinner');
-            next();
-          })
+          .then(() => next())
           .catch((e) => console.error(e));
       },
     },
@@ -44,10 +41,7 @@ export const router = new VueRouter({
       beforeEnter: (to, from, next) => {
         bus.$emit('start:spinner');
         store.dispatch('FETCH_ITEM_LIST', to.name)
-          .then(() => {
-            bus.$emit('end:spinner');
-            next();
-          })
+          .then(() => next())
           .catch((e) => console.error(e));
       },
     },
@@ -59,10 +53,7 @@ export const router = new VueRouter({
       beforeEnter: (to, from, next) => {
         bus.$emit('start:spinner');
         store.dispatch('FETCH_ITEM_LIST', to.name)
-          .then(() => {
-            bus.$emit('end:spinner');
-            next();
-          })
+          .then(() => next())
           .catch((e) => console.error(e));
       },
     },
