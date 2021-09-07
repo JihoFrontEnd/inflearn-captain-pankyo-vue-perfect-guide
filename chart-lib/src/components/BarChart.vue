@@ -1,5 +1,5 @@
 <template>
-  <canvas id="barChart" width="400" height="400"></canvas>
+  <canvas ref="barChart" width="400" height="400"></canvas>
 </template>
 
 <script>
@@ -8,8 +8,7 @@ import Chart from 'chart.js/auto';
 
 export default {
   mounted() {
-    let ctx = document.getElementById('barChart');
-    let barChart = new Chart(ctx, {
+    let barChart = new Chart(this.$refs.barChart, {
         type: 'bar',
         data: {
             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],

@@ -1,5 +1,5 @@
 <template>
-  <canvas id="lineChart" width="400" height="400"></canvas>
+  <canvas ref="lineChart" width="400" height="400"></canvas>
 </template>
 
 <script>
@@ -29,11 +29,8 @@ export default {
       data: data,
       options: {}
     };
-    var lineChart = new Chart(
-      document.getElementById('lineChart'),
-      config
-    );
-    console.log(lineChart);
+    var lineChart = new Chart(this.$refs.lineChart, config);
+    lineChart.resize(300, 300);
   },
 }
 </script>
