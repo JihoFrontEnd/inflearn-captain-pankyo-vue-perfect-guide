@@ -43,7 +43,7 @@ export default {
             }
         }
     });
-    console.log(barChart);
+    barChart.resize(300, 300);
   },
 }
 </script>
