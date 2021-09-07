@@ -3,12 +3,9 @@
 </template>
 
 <script>
-// import { Chart } from 'chart.js';
-import Chart from 'chart.js/auto';
-
 export default {
   mounted() {
-    let barChart = new Chart(this.$refs.barChart, {
+    let barChart = new this.$_Chart(this.$refs.barChart, {
         type: 'bar',
         data: {
             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
