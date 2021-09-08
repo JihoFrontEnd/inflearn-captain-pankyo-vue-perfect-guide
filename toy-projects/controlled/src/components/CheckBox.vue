@@ -1,9 +1,17 @@
 <template>
-  <input type="checkbox" v-model="checked">
+  <div>
+    <input type="checkbox" :value="value" @click="toggleCheckBox">
+    <input type="checkbox" :value="value" @click="$emit('input', !value)">
+  </div>
 </template>
 
 <script>
 export default {
-  props: ['checked'],
+  props: ['value'],
+  methods: {
+    toggleCheckBox() {
+      this.$emit('input', !this.value);
+    }
+  },
 }
 </script>
