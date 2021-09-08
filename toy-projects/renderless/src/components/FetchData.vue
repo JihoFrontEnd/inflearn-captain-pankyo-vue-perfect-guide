@@ -17,6 +17,7 @@ export default {
       })
       .catch(error => {
         alert('[ERROR] fetching the data', error);
+        // eslint-disable-next-line no-console
         console.log(error);
       });
   },
