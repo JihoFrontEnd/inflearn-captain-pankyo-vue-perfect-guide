@@ -2,7 +2,7 @@
   <div>
     <fetch-data url="https://jsonplaceholder.typicode.com/users/1">
       <!-- ... -->
-      <template slot-scope="{ response, loading}">
+      <template slot-scope="{ response, loading }">
         <div v-if="!loading">{{ response }}</div>
         <div v-else>loading...</div>
       </template>
