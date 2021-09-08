@@ -44,4 +44,12 @@
 -   [Base Directory Setup](https://app.netlify.com/sites/vigilant-aryabhata-691839/settings/deploys)
     >   Netlify가 업데이트 되면서 초기 설정에 이미 Base Directory가 있었다.
 
--   404 Not Found
+-   `404 Not Found` 문제 해결 방법
+    -   [Vue CLI](https://cli.vuejs.org/guide/deployment.html#netlify)
+    1.  배포하는 프로젝트의 `/public` 디렉토리 내에
+        `_redirect`라는 파일을 생성한다.
+    2.  아래 내용으로 채운다.
+        ```conf
+        # Netlify settings for single-page application
+        /*    /index.html   200
+        ```
