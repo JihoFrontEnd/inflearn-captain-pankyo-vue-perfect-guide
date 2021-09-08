@@ -32,4 +32,11 @@
 
 ### Vue Convention
 
-[Official Style Guide](https://vuejs.org/v2/style-guide)
+-   [Official Style Guide](https://vuejs.org/v2/style-guide)
+
+## Deploy
+
+-   [Netlify](https://www.netlify.com)
+-   [Published Site](https://vigilant-aryabhata-691839.netlify.app)
+
+>   엄청 간단해서 놀랐다.
