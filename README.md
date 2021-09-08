@@ -40,3 +40,8 @@
 -   [Published Site](https://vigilant-aryabhata-691839.netlify.app)
 
 >   엄청 간단해서 놀랐다.
+
+-   [Base Directory Setup](https://app.netlify.com/sites/vigilant-aryabhata-691839/settings/deploys)
+    >   Netlify가 업데이트 되면서 초기 설정에 이미 Base Directory가 있었다.
+
+-   404 Not Found
